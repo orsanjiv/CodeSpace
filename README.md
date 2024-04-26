@@ -28,3 +28,60 @@ KOTLIN---> https://github.com/souvikm3/YumHub
 3.3 Design the Android application using menus and action bar
 
 KOTLIN----> https://github.com/jacobras/ComposeActionMenu.git
+
+
+/////////////////////////////
+import java.util.Scanner;
+
+public class LongestPalindromeCreator {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a string: ");
+        String inputString = scanner.nextLine();
+
+        String longestPalindrome = findLongestPalindrome(inputString);
+        
+        if (!longestPalindrome.isEmpty()) {
+            System.out.println("Longest palindrome: " + longestPalindrome);
+        } else {
+            System.out.println("No palindrome found in the input string.");
+        }
+        
+        scanner.close();
+    }
+    
+    public static boolean isPalindrome(String s) {
+        int left = 0;
+        int right = s.length() - 1;
+        while (left < right) {
+            if (s.charAt(left) != s.charAt(right)) {
+                return false;
+            }
+            left++;
+            right--;
+        }
+        return true;
+    }
+
+    public static String findLongestPalindrome(String inputString) {
+        String longestPalindrome = "";
+        
+        for (int i = 0; i < inputString.length(); i++) {
+            for (int j = i + 1; j <= inputString.length(); j++) {
+                String substring = inputString.substring(i, j);
+                if (isPalindrome(substring) && substring.length() > longestPalindrome.length()) {
+                    longestPalindrome = substring;
+                }
+            }
+        }
+        
+        return longestPalindrome;
+    }
+}
+
+
+
+
+/////
