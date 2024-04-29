@@ -33,3 +33,6 @@ KOTLIN----> https://github.com/jacobras/ComposeActionMenu.git
 /////////////////////////////
 
 https://chat.openai.com/c/d77934d1-e1ce-412a-a094-8db6aa999109
+
+
+VirtualBox, VMware Workstation, Windows, Linux, Virtual Machines, C compiler, Basic programs, Cloud Sim, IDE, GAE launcher, Web applications, Cloud scenario, Matlab, Scheduling algorithm, File transfer, TryStack, OpenStack Demo, Hadoop, Single node cluster, Word count., write about each topic
